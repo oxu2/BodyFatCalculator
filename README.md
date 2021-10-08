@@ -19,7 +19,7 @@ Group 2, Module 2, BodyFatCalculator
 - [Usage](#usage)
 - [API](#api)
 - [Contributing](#contributing)
-- [License](#license)
+- [Authors](#authors)
 
 ## Security
 
@@ -65,4 +65,5 @@ Small note: If editing the Readme, please conform to the [standard-readme](https
 
 ## Authors
 * **Ouyang Xu** - (oxu2@wisc.edu)
-please follow
+* please follow me
+
