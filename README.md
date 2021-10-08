@@ -63,6 +63,6 @@ Small note: If editing the Readme, please conform to the [standard-readme](https
 
 ### Any optional sections
 
-## License
-
-[MIT © Richard McRichface.](../LICENSE)
+## Authors
+* **Ouyang Xu** - (oxu2@wisc.edu)
+please follow
