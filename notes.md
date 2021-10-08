@@ -6,3 +6,7 @@
 qq plot for residuals
 
 图片中，大腿变化不多？
+
+Ouyang's Opinion:
+
+use 
