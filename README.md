@@ -65,6 +65,6 @@ Small note: If editing the Readme, please conform to the [standard-readme](https
 
 ## Authors
 * **Ouyang Xu** - (oxu2@wisc.edu)
-* **B T** - (oxu2@wisc.edu)
+* **Bowen Tian** - (oxu2@wisc.edu)
 * please follow me
 
