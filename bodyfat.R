@@ -1,0 +1,91 @@
+bf <- read.csv('BodyFat.csv')
+typeof(bf)
+summary(bf)
+names(bf)
+
+# plot
+for (i in 3:length(names(bf))) {
+  plot(bf[, i], bf$BODYFAT, main = names(bf)[i])
+}
+
+
+# variable selection
+bf <- cbind(bf$BODYFAT, bf$ADIPOSITY, bf$CHEST, bf$ABDOMEN, bf$HIP)
+colnames(bf) <- c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
+bf <- data.frame(bf)
+bf$ABD_OVER_HIP <- bf$ABDOMEN/bf$HIP
+
+names(bf)
+summary(bf)
+
+length(bf$BODYFAT)
+
+
+# box plots
+par(mfrow=c(2,3))
+for (i in 1:length(names(bf))) {
+  boxplot(bf[, i], main = names(bf)[i])
+}
+# ad 3, chest 3, ab 3, hip 4, ratio 2
+
+
+# histograms
+par(mfrow = c(2, 3))
+for (i in 1:length(bf[1, ])) {
+  hist(bf[, i], main = names(bf)[i])
+}
+
+# bodyfat, ad, chest, ab, hip -> outliers
+
+
+# checking missing values
+for (i in 1:length(bf[1, ])) {
+  for (j in 1:length(bf[, 1])) {
+    if (is.na(bf[j,i]) == TRUE) print(c(j, i))
+  }
+}
+
+
+# remove invalid bodyfats
+for (i in 1:length(bf[, 1])) {
+  if (bf[i, 'BODYFAT'] <= 3 | bf[i, 'BODYFAT'] >= 40) {
+    print(paste(bf[i, 'BODYFAT'], i)) 
+    bf[i, ] <- NA
+  }
+}
+bf <- na.omit(bf)
+
+
+# remove outliers
+ad_outlier <- sort(bf$ADIPOSITY, decreasing = T)[1:3]
+ch_outlier <- sort(bf$CHEST, decreasing = T)[1:3]
+ab_outlier <- sort(bf$ABDOMEN, decreasing = T)[1:2]
+hi_outlier <- sort(bf$HIP, decreasing = T)[1:4]
+
+#sort(bf$CHEST)[1] %in% sort(bf$CHEST)[1:3]
+
+for (i in 1:length(bf$BODYFAT)) {
+  if (bf$ADIPOSITY[i] %in% ad_outlier) {bf[i, ] <- NA; print(i)}
+  if (bf$CHEST[i] %in% ch_outlier) {bf[i, ] <- NA; print(i)}
+  if (bf$ABDOMEN[i] %in% ab_outlier) {bf[i, ] <- NA; print(i)}
+  if (bf$HIP[i] %in% hi_outlier) {bf[i, ] <- NA; print(i)}
+}
+
+bf <- na.omit(bf)
+length(bf$BODYFAT)
+
+
+# histograms after deleting outliers
+par(mfrow = c(2, 3))
+for (i in 1:length(bf[1, ])) {
+  hist(bf[, i], main = names(bf)[i])
+}
+
+
+
+reg <- lm(bf$BODYFAT ~ bf$ADIPOSITY + bf$CHEST + bf$ABD_OVER_HIP )
+summary(reg)
+
+# check multilineariry 
+library('car')
+vif(reg) # <10 acceptable
