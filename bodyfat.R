@@ -1,16 +1,16 @@
-bf <- read.csv('BodyFat.csv')
-typeof(bf)
-summary(bf)
-names(bf)
+data <- read.csv('BodyFat.csv')
+# typeof(bf)
+# summary(bf)
+# names(bf)
 
 # plot
-for (i in 3:length(names(bf))) {
-  plot(bf[, i], bf$BODYFAT, main = names(bf)[i])
+for (i in 3:length(names(data))) {
+  plot(data[, i], data$BODYFAT, main = names(data)[i])
 }
 
 
 # variable selection
-bf <- cbind(bf$BODYFAT, bf$ADIPOSITY, bf$CHEST, bf$ABDOMEN, bf$HIP)
+bf <- cbind(data$BODYFAT, data$ADIPOSITY, data$CHEST, data$ABDOMEN, data$HIP)
 colnames(bf) <- c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
 bf <- data.frame(bf)
 bf$ABD_OVER_HIP <- bf$ABDOMEN/bf$HIP
@@ -18,9 +18,9 @@ bf$ABD_OVER_HIP <- bf$ABDOMEN/bf$HIP
 names(bf)
 summary(bf)
 
-length(bf$BODYFAT)
+len = length(bf$BODYFAT)
 
-
+plot(x = 1:len, y = bf$ABD_OVER_HIP)
 # box plots
 par(mfrow=c(2,3))
 for (i in 1:length(names(bf))) {
@@ -89,3 +89,4 @@ summary(reg)
 # check multilineariry 
 library('car')
 vif(reg) # <10 acceptable
+
