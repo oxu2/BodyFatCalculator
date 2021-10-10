@@ -1,22 +1,24 @@
-data <- read.csv('BodyFat.csv')
-# typeof(bf)
-# summary(bf)
-# names(bf)
+rm(list=ls())
 
-# plot
-for (i in 3:length(names(data))) {
-  plot(data[, i], data$BODYFAT, main = names(data)[i])
-}
+data <- read.csv('BodyFat.csv')
+# typeof(data)
+# summary(data)
+# names(data)
+
+# # plot
+# for (i in 3:length(names(data))) {
+#   plot(data[, i], data$BODYFAT, main = names(data)[i])
+# }
 
 
 # variable selection
-bf <- cbind(data$BODYFAT, data$ADIPOSITY, data$CHEST, data$ABDOMEN, data$HIP)
-colnames(bf) <- c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
+bf <- cbind(data$IDNO, data$BODYFAT, data$ADIPOSITY, data$CHEST, data$ABDOMEN, data$HIP)
+colnames(bf) <- c('IDNO', 'BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
 bf <- data.frame(bf)
 bf$ABD_OVER_HIP <- bf$ABDOMEN/bf$HIP
-
-names(bf)
-summary(bf)
+# head(bf)
+# names(bf)
+# summary(bf)
 
 len = length(bf$BODYFAT)
 
@@ -90,3 +92,35 @@ summary(reg)
 library('car')
 vif(reg) # <10 acceptable
 
+reg2 <- lm(bf$BODYFAT ~ bf$ADIPOSITY + bf$ABD_OVER_HIP )
+summary(reg2)
+
+# install.packages("MVA")  
+# install.packages("biwt") 
+# install.packages("robustbase")  
+
+require("MVA")
+require("biwt")
+
+# Here, we detect outliers for explanatory variables. Intuitively, if some record is far from the majority, it may be wrong. Even it is a correct record, it may not come from the same population we are interested in. It is difficult to plot high dimension scatter plot so here we look at pairwise scatter plots. 
+
+options(repr.plot.width=10, repr.plot.height=10, res=500)
+pairs(bf[-1], 
+      panel = function(x,y, ...) {
+        text(x, y, bf$IDNO,cex = 1, pos = 2)
+        bvbox(cbind(x,y), add = TRUE,method = "robust")
+      })
+
+# The 39, 41 and 212 always lay out of the dashed line. We adapt star plots to check if there is any mistake.
+
+set.seed(1)
+t <- sample(1:dim(bf)[1], 9)
+# t <- t[!t %in% c(39,41,216)]
+subdata <- bf[unique(c(39,41,t)), ]
+stars(subdata[,c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP', 'ABD_OVER_HIP')],
+      labels=subdata$IDNO)
+
+stars(subdata[,c('BODYFAT', 'CHEST', 'ABDOMEN', 'HIP')],labels=subdata$IDNO)
+
+
+# We can see 39 and 41 are two big guys with large measurements in almost every aspect and are significantly different from others, so we will not delete them.
