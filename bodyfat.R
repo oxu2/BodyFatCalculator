@@ -92,8 +92,17 @@ summary(reg)
 library('car')
 vif(reg) # <10 acceptable
 
-reg2 <- lm(bf$BODYFAT ~ bf$ADIPOSITY + bf$ABD_OVER_HIP )
+reg2 <- lm(bf$BODYFAT ~ bf$ADIPOSITY + bf$ABD_OVER_HIP)
+
 summary(reg2)
+
+vif(reg2)
+
+reg3 <- lm(bf$BODYFAT ~  bf$ABD_OVER_HIP)
+
+summary(reg3)
+
+vif(reg3)
 
 # install.packages("MVA")  
 # install.packages("biwt") 
