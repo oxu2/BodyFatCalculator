@@ -3,8 +3,8 @@ library(ggplot2)
 library(scales)
 
  fluidPage(
-  titlePanel(h1("Body Fat Calculator for Men")),
-  sidebarPanel(h2("Type in Your Information: "),
+  titlePanel(h2("Body Fat Calculator for Men")),
+  sidebarPanel(h4("Type in Your Information: "),
                numericInput("abodmen",h4("Abdomen"), value = 90),
                radioButtons("unit_abodmen","unit", choices = c("cm","inch")),
 
@@ -15,21 +15,24 @@ library(scales)
                numericInput("thigh",h4("Thigh"), value = 50),
                radioButtons("unit_thigh","unit", choices = c("cm","inch")),
                
-               submitButton()
+               submitButton(),
+               htmlOutput(outputId = "bodyfat")
 
   ),
   
   mainPanel(
+    br(),br(),br(),
     h4(textOutput("space")),
-    img(src = 'measurement.png', height = 365, width = 466),
-    
+    img(src = 'measurement.png', height = 395, width = 516),
+    br(),br(),br(),br(),
+    h4(textOutput("according")),
+    img(src = 'line.png', height = 82, width = 616),
+    br(),br(),br(),br(),br(),
 
     
-    htmlOutput(outputId = "bodyfat"),
-    br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),br(),
-
     h4(textOutput("info")),
-    textOutput("contact1"),textOutput("contact2")
+    textOutput("contact1"),
+    textOutput("contact2")
   )
   
 )
