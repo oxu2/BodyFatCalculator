@@ -39,8 +39,8 @@ function(input,output) {
   })
   
   output$space = renderText({"Note: How to measure your body?"})
-  output$according = renderText({ "Criterion"})
-  output$info = renderText({ "Contact"})
+  output$Criterion = renderText({ "Criterion"})
+  output$contact0 = renderText({ "Contact"})
   output$contact1 = renderText({ "Ouyang Xu"})
   output$contact2 = renderText({ "E-mail: oxu2@wisc.edu"})
   
