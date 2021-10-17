@@ -19,10 +19,10 @@ Group 2, Module 2, BodyFatCalculator
 - [Usage](#usage)
 - [API](#api)
 - [Contributing](#contributing)
-- [Authors](#authors)
+- [Contributors](#contributors)
 
 ## Security
-
+https://ouyangxu.shinyapps.io/BodyfatShiny/
 ### Any optional sections
 
 ## Background
@@ -63,7 +63,7 @@ Small note: If editing the Readme, please conform to the [standard-readme](https
 
 ### Any optional sections
 
-## Authors
+## Contributors
 * **Ouyang Xu** - (oxu2@wisc.edu)
 * **Bowen Tian** - (btian23@wisc.edu)
 * please follow me
