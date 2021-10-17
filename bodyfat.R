@@ -132,4 +132,4 @@ stars(subdata[,c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP', 'ABD_OVER_HI
 stars(subdata[,c('BODYFAT', 'CHEST', 'ABDOMEN', 'HIP')],labels=subdata$IDNO)
 
 
-# We can see 39 and 41 are two big guys with large measurements in almost every aspect and are significantly different from others, so we will not delete them.
+# We can see 39 and 41 are two big guys with large measurements in almost every aspect and are statistically different from others, i.e. they may be outliners, so we will delete them.

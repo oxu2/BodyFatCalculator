@@ -10,3 +10,7 @@ qq plot for residuals
 Ouyang's Opinion:
 
 use 
+
+
+disadvantage:
+it lacks the data from female, 
