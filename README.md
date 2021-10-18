@@ -71,7 +71,7 @@ Note: The `license` badge image link at the top of this file should be updated w
 ![Drag Racing](/image/ShinyPreview.png)
 
 ## Acknowledgements
-This project is a course project of STAT 628 Fall 2021 UW-Madison, supervised by Prof.Hyunseung Kang.
+This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof.Hyunseung Kang.
 
 
 ## Contributors
