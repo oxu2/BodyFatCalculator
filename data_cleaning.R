@@ -1,6 +1,6 @@
 bf <- read.csv('BodyFat.csv')
 
-# remove invalid bodyfats
+# remove invalid bodyfatsw
 for (i in 1:length(bf[, 1])) {
   if (bf[i, 'BODYFAT'] <= 3 | bf[i, 'BODYFAT'] >= 40) {
     print(paste(bf[i, 'BODYFAT'], i)) 
@@ -68,6 +68,31 @@ colnames(bf_valid) <- name
 bf_valid <- data.frame(bf_valid)
 head(bf_valid)
 
+library(MVA)
+library(biwt)
+
+# Here, we detect outliers for explanatory variables. Intuitively, if some record is far from the majority, it may be wrong. Even it is a correct record, it may not come from the same population we are interested in. It is difficult to plot high dimension scatter plot so here we look at pairwise scatter plots. 
+
+options(repr.plot.width=10, repr.plot.height=10, res=500)
+pairs(bf[-1], 
+      panel = function(x,y, ...) {
+        text(x, y, bf$IDNO,cex = 1, pos = 2)
+        bvbox(cbind(x,y), add = TRUE,method = "robust")
+      })
+
+# The 39, 41 and 212 always lay out of the dashed line. We adapt star plots to check if there is any mistake.
+
+set.seed(1)
+t <- sample(1:dim(bf)[1], 9)
+# t <- t[!t %in% c(39,41,216)]
+subdata <- bf[unique(c(39,41,t)), ]
+stars(subdata[,c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP', 'ABD_OVER_HIP')],
+      labels=subdata$IDNO)
+
+stars(subdata[,c('BODYFAT', 'CHEST', 'ABDOMEN', 'HIP')],labels=subdata$IDNO)
+
+
+# We can see 39 and 41 are two big guys with large measurements in almost every aspect and are statistically different from others, i.e. they may be outliners, so we will delete them.
 
 # fit model
 model1 <- lm(bf$BODYFAT ~ bf_valid$ADIPOSITY + bf_valid$CHEST + bf_valid$ABDOMEN + bf_valid$HIP)
