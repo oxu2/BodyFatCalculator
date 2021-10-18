@@ -22,7 +22,11 @@ Group 2, Module 2, BodyFatCalculator
 - [Contributors](#contributors)
 
 ## Security
-https://ouyangxu.shinyapps.io/BodyfatShiny/
+
+[Shiny Link](https://ouyangxu.shinyapps.io/BodyfatShiny/)
+
+Preview:
+![Drag Racing](/image/ShinyPreview.png)
 ### Any optional sections
 
 ## Background
@@ -31,9 +35,16 @@ https://ouyangxu.shinyapps.io/BodyfatShiny/
 
 ## Install
 
-This module depends upon a knowledge of [Markdown]().
+This module depends upon a knowledge of  the packages in R.
 
 ```
+install.packages("car")
+install.packages("tidyverse")
+install.packages("caret")
+install.packages("broom")
+install.packages("MVA")
+install.packages("biwt")
+install.packages("robustbase")
 ```
 
 ### Any optional sections
@@ -64,7 +75,7 @@ Small note: If editing the Readme, please conform to the [standard-readme](https
 ### Any optional sections
 
 ## Contributors
-* **Ouyang Xu** - (oxu2@wisc.edu)
 * **Bowen Tian** - (btian23@wisc.edu)
-* please follow me
+* **Ouyang Xu** - (oxu2@wisc.edu)
+* **Tianhang Li** -(tli425@wisc.edu)
 

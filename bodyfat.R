@@ -108,8 +108,8 @@ vif(reg3)
 # install.packages("biwt") 
 # install.packages("robustbase")  
 
-require("MVA")
-require("biwt")
+library(MVA)
+library(biwt)
 
 # Here, we detect outliers for explanatory variables. Intuitively, if some record is far from the majority, it may be wrong. Even it is a correct record, it may not come from the same population we are interested in. It is difficult to plot high dimension scatter plot so here we look at pairwise scatter plots. 
 
