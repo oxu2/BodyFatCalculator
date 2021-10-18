@@ -68,8 +68,6 @@ MAE(predictions_cal, bf$BODYFAT)
 
 
 
-
-
 # residual plot to check linearity
 ac <- augment(model_aiccor)
 ggplot(ac, aes(x = .fitted, y = .resid)) + geom_point() + labs( title = 'residual plot', x = 'fitted value', y = 'residuals')
@@ -91,3 +89,7 @@ p5<-p5+theme_bw()+theme(legend.position="bottom")
 p5 <- p5 + geom_hline(yintercept=0)
 p5
 
+
+# example of usage
+newdata <- data.frame(ABDOMEN = 100, WEIGHT = 180, THIGH = 60)
+predict(model_aiccor, newdata = newdata, interval = 'confidence')
