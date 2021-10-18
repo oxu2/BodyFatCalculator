@@ -59,7 +59,8 @@ install.packages("robustbase")
 [Shiny APP Link](https://ouyangxu.shinyapps.io/BodyfatShiny/)
 
 ### Preview:
--![ShinyPreview](/BodyFatShiny/ShinyPreview.png)
+-![ShinyPreview](./BodyFatShiny/ShinyPreview.png)
+
 
 ## Acknowledgements
 This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof.Hyunseung Kang.
