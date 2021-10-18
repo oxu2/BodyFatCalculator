@@ -26,6 +26,7 @@ boxplot(0.454*BodyFat$WEIGHT[-c(163,221)]/(0.0254*BodyFat$HEIGHT[-c(163,221)])^2
 
 library(MVA)
 library(biwt)
+
 data = BodyFat
 bf <- cbind(data$IDNO, data$BODYFAT, data$ADIPOSITY, data$CHEST, data$ABDOMEN, data$HIP)
 colnames(bf) <- c('IDNO', 'BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
@@ -44,14 +45,10 @@ pairs(bf[-1],
 
 set.seed(1)
 t <- sample(1:dim(bf)[1], 9)
-# t <- t[!t %in% c(39,41,216)]
 subdata <- bf[unique(c(39,41,t)), ]
-stars(subdata[,c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP', 'ABD_OVER_HIP')],
-      labels=subdata$IDNO)
 
 stars(subdata[,c('BODYFAT', 'CHEST', 'ABDOMEN', 'HIP')],labels=subdata$IDNO)
 
- 
 
 
 
