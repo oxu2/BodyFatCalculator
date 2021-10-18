@@ -12,7 +12,7 @@ The body fat percentage is a measure of fitness level, which can be calculated a
 ***
 
 ## Table of Contents
-  - [Description](#description)
+  <!-- - [Description](#description) -->
   - [Dependencies](#dependencies)
 
   - [Installation](#installation)
@@ -26,8 +26,8 @@ The body fat percentage is a measure of fitness level, which can be calculated a
   
   - [Contributors](#contributors)
 
-## Description
-
+<!-- ## Description -->
+***
 ## Dependencies
 - [R](https://www.r-project.org/)
 - [R Shiny](https://github.com/rstudio/shiny)(Shiny is supported on the latest release version of R, as well as the previous four minor release versions of R)
@@ -65,9 +65,9 @@ Note: The `license` badge image link at the top of this file should be updated w
 
 ## Link to the web-based app
 
-[Shiny Link](https://ouyangxu.shinyapps.io/BodyfatShiny/)
+[Shiny APP Link](https://ouyangxu.shinyapps.io/BodyfatShiny/)
 
-Preview:
+### Preview:
 ![Drag Racing](/image/ShinyPreview.png)
 
 ## Acknowledgements
