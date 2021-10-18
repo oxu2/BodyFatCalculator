@@ -1,11 +1,5 @@
 # BodyFatCalculator
 
-<!-- [banner]() -->
-
-<!-- ![badge]() -->
-<!-- ![badge]() -->
-<!-- [![license](https://img.shields.io/github/license/:user/:repo.svg)](LICENSE) -->
-<!-- [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme) -->
 The body fat percentage is a measure of fitness level, which can be calculated as the total mass of fat divided by total body mass. In this project, a simple, robust, and accurate method to estimate the percentage of body fat using available measurements is proposed, related to man's weight, circumferences of abdomen, and thigh. We will follow several steps such as data cleaning, model building and selection, and model diagnostics. The final measurement will be a linear model with three variables which are the circumference of the abdomen, the circumference of the thigh, and body weight.
 <!-- *** -->
 <!-- Group 2, Module 2, BodyFatCalculator -->
@@ -58,13 +52,6 @@ install.packages("robustbase")
 - Model Selection and Diagnostics.R - R code for model building, selection based on cleaned data and diagnostics for the selected model.
 - Summary.pdf - A two-page .pdf file of the summary of the whole project, including the description of project process and conclusions.
 - Presentation.pdf - A .pdf file of the slides we used in presentation.
-
-Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.
-
-
-
-
-
 
 
 ## Link to the web-based app
