@@ -54,6 +54,9 @@ install.packages("robustbase")
 
 ```
 ```
+RShiny Folder - Code for Shiny App of body fat calculator based on final model
+Data Cleaning.R - R code for data preprocesses on Bodyfat.csv.
+Model Selection and Diagnostics.R - R code for model building, selection based on cleaned data and diagnostics for the selected model.
 
 Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.
 
