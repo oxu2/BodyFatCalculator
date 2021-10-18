@@ -24,7 +24,35 @@ boxplot(0.454*BodyFat$WEIGHT[-c(163,221)]/(0.0254*BodyFat$HEIGHT[-c(163,221)])^2
 #dev.off()
 
 
+library(MVA)
+library(biwt)
+data = BodyFat
+bf <- cbind(data$IDNO, data$BODYFAT, data$ADIPOSITY, data$CHEST, data$ABDOMEN, data$HIP)
+colnames(bf) <- c('IDNO', 'BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP')
+bf <- data.frame(bf)
+bf$ABD_OVER_HIP <- bf$ABDOMEN/bf$HIP
+# Here, we detect outliers for explanatory variables. Intuitively, if some record is far from the majority, it may be wrong. Even it is a correct record, it may not come from the same population we are interested in. It is difficult to plot high dimension scatter plot so here we look at pairwise scatter plots. 
+
+options(repr.plot.width=10, repr.plot.height=10, res=500)
+pairs(bf[-1], 
+      panel = function(x,y, ...) {
+        text(x, y, bf$IDNO,cex = 1, pos = 2)
+        bvbox(cbind(x,y), add = TRUE,method = "robust")
+      })
+
+# The 39, 41 and 212 always lay out of the dashed line. We adapt star plots to check if there is any mistake.
+
+set.seed(1)
+t <- sample(1:dim(bf)[1], 9)
+# t <- t[!t %in% c(39,41,216)]
+subdata <- bf[unique(c(39,41,t)), ]
+stars(subdata[,c('BODYFAT', 'ADIPOSITY', 'CHEST', 'ABDOMEN', 'HIP', 'ABD_OVER_HIP')],
+      labels=subdata$IDNO)
+
+stars(subdata[,c('BODYFAT', 'CHEST', 'ABDOMEN', 'HIP')],labels=subdata$IDNO)
 
  
+
+
 
 
