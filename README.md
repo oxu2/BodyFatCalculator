@@ -53,13 +53,12 @@ install.packages("robustbase")
 - Summary.pdf - A two-page .pdf file of the summary of the whole project, including the description of project process and conclusions.
 - Presentation.pdf - A .pdf file of the slides we used in presentation.
 
-
 ## Link to the web-based app
 
 [Shiny APP Link](https://ouyangxu.shinyapps.io/BodyfatShiny/)
 
 ### Preview:
-![ShinyPreview](/image/ShinyPreview.png)
+<img src="/BodyFatShiny/ShinyPreview.png" width="600"/>
 
 ## Acknowledgements
 This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof.Hyunseung Kang.
