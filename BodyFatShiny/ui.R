@@ -37,5 +37,3 @@ library(scales)
   )
   
 )
-
-#  shinyApp(ui, server)

@@ -33,7 +33,6 @@ function(input,output) {
       if (is.na(bodyfat.judge("male", p))){
         HTML( paste("Your body fat is",round(p,2),"%.",h3("Extremely below the normal range! Please check your input.")) )
       } 
-      # else HTML(paste( h4("You body fat percentage is: "), h2(round(p,2), "%", align="center"), h4("The type of your body fat is:"), h3(bodyfat.judge("male", p)), sep = '<br/>'))
       else HTML(paste( h4("You body fat percentage is: "), h2(round(p,2), "%"), h4("The type of your body fat is:"), h4(bodyfat.judge("male", p)), sep = '<br/>'))
     } 
   })
