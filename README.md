@@ -30,7 +30,7 @@ The body fat percentage is a measure of fitness level, which can be calculated a
 
 ## Installation
 
-This module depends upon a knowledge of  the packages in R.
+This project depends upon a knowledge of  the packages in R.
 
 ```
 install.packages("shiny")
@@ -62,11 +62,11 @@ install.packages("robustbase")
 ![ShinyPreview](./BodyFatShiny/ShinyPreview.png)
 
 ## Acknowledgements
-This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof.Hyunseung Kang.
+This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof. Hyunseung Kang.
 
 
 ## Contributors
 * **Bowen Tian** - (btian23@wisc.edu)
 * **Ouyang Xu** - (oxu2@wisc.edu)
-* **Tianhang Li** -(tli425@wisc.edu)
+* **Tianhang Li** - (tli425@wisc.edu)
 
