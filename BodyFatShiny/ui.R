@@ -29,7 +29,6 @@ library(scales)
     img(src = 'line.png', height = 82, width = 616),
     br(),br(),br(),br(),br(),
 
-    tags$a(href="https://github.com/oxu2/BodyFatCalculator", "GitHub link to this project"),
     br(),br(),
     h4(textOutput("contact0")),
     textOutput("contact1"),
