@@ -11,7 +11,7 @@ The body fat percentage is a measure of fitness level, which can be calculated a
 
   - [Installation](#installation)
 
-  - [File Description](#file-description)
+  - [File Description in Code Folder](#file-description-in-code-folder)
 
   - [Link to the web-based app](#link-to-the-web-based-app)
   
@@ -44,14 +44,15 @@ install.packages("robustbase")
 ```
 
 
-## File Description
+## File Description in Code Folder
 
-- BodyfatShiny Folder - Code for Shiny App of body fat calculator based on final model.
-- BodyFat.csv - the raw data set of available measurements include age, weight, height, bmi, and various body circumference measurements.
-- Data Preprocessing.R - R code for data cleaning on Bodyfat.csv.
-- Model Selection and Diagnostics.R - R code for model building, selection based on cleaned data and diagnostics for the selected model.
-- Summary.pdf - A two-page .pdf file of the summary of the whole project, including the description of project process and conclusions.
-- Presentation.pdf - A .pdf file of the slides we used in presentation.
+<!-- - Folder BodyfatShiny - Code for Shiny App of body fat calculator based on final model. -->
+<!-- -  Folder [BodyfatShiny](BodyFatShiny/server.R) - Code for Shiny App of body fat calculator based on final model. -->
+- [BodyFat.csv](Code/BodyFat.csv) - the raw data set of available measurements include age, weight, height, bmi, and various body circumference measurements.
+- [Data Preprocessing.R](Code/Data%20Preprocessing.R) - R code for data cleaning on Bodyfat.csv.
+- [Model Selection and Diagnostics.R](Code/Model%20Selection%20and%20Diagnostics.R) - R code for model building, selection based on cleaned data and diagnostics for the selected model.
+<!-- - [Summary.pdf](Summary.pdf) - A two-page .pdf file of the summary of the whole project, including the description of project process and conclusions. -->
+<!-- - [Presentation.pdf](Presentation.pdf) - A .pdf file of the slides we used in presentation. -->
 
 ## Link to the web-based app
 
