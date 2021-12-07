@@ -12,7 +12,7 @@ The body fat percentage is a measure of fitness level, which can be calculated a
 
   - [File Description in Code Folder](#file-description-in-code-folder)
 
-  - [Web-based APP](#link-to-the-web-based-app)
+  - [Web-based APP](#web-based-app)
   
   - [Acknowledgements](#acknowledgements)
 
