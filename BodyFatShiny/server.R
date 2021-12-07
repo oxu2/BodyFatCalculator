@@ -41,7 +41,7 @@ function(input,output) {
   output$Criterion = renderText({ "Criterion"})
   output$contact0 = renderText({ "Contact"})
   output$contact1 = renderText({ "Ouyang Xu"})
-  output$contact2 = renderText({ "E-mail: oxu2@wisc.edu"})
+  output$contact2 = renderText({ "E-mail: oxu2[at]wisc[dot]edu"})
   
 
 }

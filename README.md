@@ -64,7 +64,7 @@ This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof. 
 
 
 ## Contributors
-* **Bowen Tian** - (btian23@wisc.edu) : Contribute to data preprocessing, model diagnostics, report writing.
-* **Ouyang Xu** - (oxu2@wisc.edu) : Contribute to R Shiny APP, Github construction, report writing.
-* **Tianhang Li** - (tli425@wisc.edu) : Contribute to model selection, model evaluation, report writing, slides writing.
+- **Bowen Tian** - (btian23@wisc.edu) : Contribute to data preprocessing, model diagnostics, report writing.
+- **Ouyang Xu** - (oxu2@wisc.edu) : Contribute to R Shiny APP, Github construction, report writing.
+- **Tianhang Li** - (tli425@wisc.edu) : Contribute to model selection, model evaluation, report writing, slides writing.
 

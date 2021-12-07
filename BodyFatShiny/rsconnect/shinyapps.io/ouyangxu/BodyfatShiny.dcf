@@ -5,9 +5,9 @@ account: ouyangxu
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4856395
-bundleId: 5219419
+bundleId: 5338011
 url: https://ouyangxu.shinyapps.io/BodyfatShiny/
-when: 1636151972.64447
-lastSyncTime: 1636151972.64448
+when: 1638858161.30058
+lastSyncTime: 1638858161.30059
 asMultiple: FALSE
 asStatic: FALSE
