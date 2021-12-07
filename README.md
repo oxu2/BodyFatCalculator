@@ -60,7 +60,7 @@ install.packages("robustbase")
 ![ShinyPreview](BodyFatShiny/ShinyPreview.png)
 
 ## Acknowledgements
-This project is a project of STAT 628 Fall 2021 UW-Madison, supervised by Prof. Hyunseung Kang.
+This is a project of STAT 628 Fall 2021 at UW-Madison, supervised by Prof. Hyunseung Kang.
 
 
 ## Contributors
