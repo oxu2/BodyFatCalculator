@@ -14,7 +14,7 @@ The body fat percentage is a measure of fitness level, which can be calculated a
 
   - [Web-based APP](#web-based-app)
   
-  - [Acknowledgements](#acknowledgements)
+  - [Acknowledgments](#acknowledgments)
 
   
   - [Contributors](#contributors)
@@ -59,7 +59,7 @@ install.packages("robustbase")
 ### Preview:
 ![ShinyPreview](BodyFatShiny/ShinyPreview.png)
 
-## Acknowledgements
+## Acknowledgments
 This is a project of STAT 628 Fall 2021 at UW-Madison, supervised by Prof. Hyunseung Kang.
 
 
